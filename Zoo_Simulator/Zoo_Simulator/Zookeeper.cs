@@ -6,16 +6,21 @@ using System.Threading.Tasks;
 
 namespace Zoo_Simulator
 {
-    internal class ZooKeeper
+    internal class Zookeeper
     {
         private string name;
 
-        public ZooKeeper(string name)
+        public Zookeeper(string name)
         {
             this.name = name;
         }
 
         public void FeedAnimal()
+        {
+
+        }
+
+        public void GetFired()
         {
 
         }

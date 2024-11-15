@@ -10,26 +10,23 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Zoo_Simulator
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Add_Animal.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Add_Animal : Window
     {
-        public MainWindow()
+        public Add_Animal()
         {
             InitializeComponent();
         }
 
-        private void Add_Animal_Click(object sender, RoutedEventArgs e)
+        private void Popup_Add_Animal_Click(object sender, RoutedEventArgs e)
         {
-            Add_Animal addAnimal = new Add_Animal();
-
-            addAnimal.Show();
+            MessageBox.Show("Button clicked");
         }
     }
 }

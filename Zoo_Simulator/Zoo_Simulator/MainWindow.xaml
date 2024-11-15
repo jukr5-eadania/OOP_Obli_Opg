@@ -8,6 +8,16 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Label Content="Bird Cage" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-        <ListBox d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,41,630,261"/>
+        <ListBox x:Name="Bird_Cage" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,41,630,261"/>
+        <ListBox x:Name="Reptile_Cage" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="198,41,442,261"/>
+        <Label Content="Reptile Cage" HorizontalAlignment="Left" Margin="198,10,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="Mammal_Cage" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="385,41,255,261"/>
+        <Label Content="Mammal Cage" HorizontalAlignment="Left" Margin="385,10,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="Zookeepers" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="600,44,40,258"/>
+        <Label Content="Zookeepers" HorizontalAlignment="Left" Margin="600,13,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="Add_Animal" Content="Add New Animal" HorizontalAlignment="Left" Margin="10,178,0,0" VerticalAlignment="Top" Click="Add_Animal_Click"/>
+        <Button x:Name="Hire_Zookeeper" Content="Hire New Zookeeper" HorizontalAlignment="Left" Margin="600,181,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="Remove_Animal" Content="Remove Animal" HorizontalAlignment="Left" Margin="10,217,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="Fire_Zookeeper" Content="Fire Zookeeper" HorizontalAlignment="Left" Margin="600,217,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>
