@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Label Content="Bird Cage" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <ListBox d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,41,630,261"/>
     </Grid>
 </Window>
