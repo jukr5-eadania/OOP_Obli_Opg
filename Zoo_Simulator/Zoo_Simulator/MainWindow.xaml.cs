@@ -20,9 +20,13 @@ namespace Zoo_Simulator
     /// </summary>
     public partial class MainWindow : Window
     {
+        private List<Zookeeper> zookeeperlist { get; set; }
+
         public MainWindow()
         {
             InitializeComponent();
+            zookeeperlist = new List<Zookeeper>();
+            Zookeepers.ItemsSource = zookeeperlist;
         }
 
         private void Add_Animal_Click(object sender, RoutedEventArgs e)
@@ -31,5 +35,44 @@ namespace Zoo_Simulator
 
             addAnimal.Show();
         }
+
+        public void AddAnimal()
+        {
+            Bird_Cage.Items.Add("bruh");
+        }
+
+        private void Hire_Zookeeper_Click(object sender, RoutedEventArgs e)
+        {
+            string newZookeeper = Zookeeper_Input.Text;
+            if (!string.IsNullOrEmpty(newZookeeper))
+            {
+                zookeeperlist.Add(new Zookeeper { Name = newZookeeper });
+                Zookeeper_Input.Clear();
+
+                Zookeepers.ItemsSource = null;
+                Zookeepers.ItemsSource = zookeeperlist;
+            }
+            else
+            {
+                MessageBox.Show("Please enter a name for the zookeeper you want to hire");
+            }
+        }
+
+        private void Fire_Zookeeper_Click(object sender, RoutedEventArgs e)
+        {
+            Zookeeper selectedZookeeper = (Zookeeper)Zookeepers.SelectedItem;
+            if (selectedZookeeper != null)
+            {
+                zookeeperlist.Remove(selectedZookeeper);
+
+                Zookeepers.ItemsSource = null;
+                Zookeepers.ItemsSource = zookeeperlist;
+            }
+            else
+            {
+                MessageBox.Show("Please Select a zookeeper to fire");
+            }
+        }
+
     }
 }

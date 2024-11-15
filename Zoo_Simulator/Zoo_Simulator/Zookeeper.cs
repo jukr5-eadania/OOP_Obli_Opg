@@ -8,12 +8,7 @@ namespace Zoo_Simulator
 {
     internal class Zookeeper
     {
-        private string name;
-
-        public Zookeeper(string name)
-        {
-            this.name = name;
-        }
+        public string Name { get; set; }
 
         public void FeedAnimal()
         {

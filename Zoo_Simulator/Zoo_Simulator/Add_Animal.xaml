@@ -11,8 +11,19 @@
             <Label>
                 Please add an animal to a cage
             </Label>
-            <ComboBox Width="120"/>
+            <Label>
+                Please select which cage the animal should go in
+            </Label>
+            <ComboBox x:Name="CageSelect" Width="120"/>
+            <Label>
+                Please Select what animal should go in the cage
+            </Label>
+            <ComboBox x:Name="Select_Animal" Width="120"/>
+            <Label>
+                Please enter animal name:
+            </Label>
+            <TextBox x:Name="Add_Animal_Input" TextWrapping="Wrap" Width="120"/>
         </StackPanel>
-        <Button x:Name="Popup_Add_Animal" Content="Add Animal" HorizontalAlignment="Center" Margin="0,122,0,0" VerticalAlignment="Top" Click="Popup_Add_Animal_Click"/>
+        <Button x:Name="Popup_Add_Animal" Content="Add Animal" HorizontalAlignment="Center" Margin="0,192,0,0" VerticalAlignment="Top" Click="Popup_Add_Animal_Click"/>
     </Grid>
 </Window>

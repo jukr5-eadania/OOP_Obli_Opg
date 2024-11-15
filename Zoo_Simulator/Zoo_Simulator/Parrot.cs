@@ -8,7 +8,7 @@ namespace Zoo_Simulator
 {
     internal class Parrot : Bird
     {
-        public Parrot(string name, int hunger) : base(name, hunger)
+        public Parrot(string name) : base(name)
         {
         }
     }

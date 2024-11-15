@@ -20,10 +20,10 @@ namespace Zoo_Simulator
         protected string name;
         protected int hunger;
 
-        public Animal(string name, int hunger)
+        public Animal(string name)
         {
             this.name = name;
-            this.hunger = hunger;
+            hunger = 100;
         }
 
         public abstract void Eat();
