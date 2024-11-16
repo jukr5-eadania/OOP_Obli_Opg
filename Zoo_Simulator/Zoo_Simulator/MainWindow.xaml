@@ -21,5 +21,8 @@
         <Button x:Name="Fire_Zookeeper" Content="Fire Zookeeper" HorizontalAlignment="Left" Margin="601,290,0,0" VerticalAlignment="Top" Click="Fire_Zookeeper_Click"/>
         <TextBox x:Name="Zookeeper_Input" HorizontalAlignment="Left" Margin="601,219,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="Zookeeper_Name" Content="Please enter Zookeeper name" HorizontalAlignment="Left" Margin="601,181,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="Feed_Animal" Content="Feed Animals" HorizontalAlignment="Left" Margin="354,303,0,0" VerticalAlignment="Top" Click="Feed_Animal_Click"/>
+        <ComboBox x:Name="Food" HorizontalAlignment="Left" Margin="198,303,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="Food_Label" Content="Foods:" HorizontalAlignment="Left" Margin="198,272,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

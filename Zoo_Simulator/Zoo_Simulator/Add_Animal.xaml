@@ -16,7 +16,7 @@
             </Label>
             <ComboBox x:Name="CageSelect" Width="120"/>
             <Label>
-                Please Select what animal should go in the cage
+                Please select what animal should go in the cage
             </Label>
             <ComboBox x:Name="Select_Animal" Width="120"/>
             <Label>

@@ -14,10 +14,5 @@ namespace Zoo_Simulator
         {
 
         }
-
-        public void GetFired()
-        {
-
-        }
     }
 }
