@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Timers;
 
 namespace Zoo_Simulator
@@ -49,7 +45,7 @@ namespace Zoo_Simulator
             }
         }
 
-        public void SetMetabolism()
+        public virtual void SetMetabolism()
         {
             System.Timers.Timer timer = new System.Timers.Timer(10000);
             timer.Elapsed += Metabolism;

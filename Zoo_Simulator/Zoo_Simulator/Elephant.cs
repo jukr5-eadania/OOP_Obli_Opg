@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 
 namespace Zoo_Simulator
 {
@@ -37,6 +32,14 @@ namespace Zoo_Simulator
             {
                 MessageBox.Show($"{zookeeper.Name} has no fruit left");
             }
+        }
+
+        public override void SetMetabolism()
+        {
+            System.Timers.Timer timer = new System.Timers.Timer(5000);
+            timer.Elapsed += Metabolism;
+            timer.AutoReset = true;
+            timer.Enabled = true;
         }
     }
 }
