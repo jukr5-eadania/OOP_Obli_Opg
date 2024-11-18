@@ -1,0 +1,108 @@
+﻿<Window x:Class="Zoo_Simulator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Zoo_Simulator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label x:Name="Cage1_Label" Content="Cage 1" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="Cage1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,41,630,261">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Row="0" Grid.Column="0" Text="Animal:"/>
+                            <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding Name}" />
+                            <TextBlock Grid.Row="1" Grid.Column="0" Text="Mood:"/>
+                            <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Mood}"/>
+                            <TextBlock Grid.Row="2" Grid.Column="0" Text="Hunger: "/>
+                            <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding Hunger}"/>
+                        </Grid>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <ListBox x:Name="Cage2" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="198,41,442,261">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Row="0" Grid.Column="0" Text="Animal:"/>
+                            <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding Name}" />
+                            <TextBlock Grid.Row="1" Grid.Column="0" Text="Mood:"/>
+                            <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Mood}"/>
+                            <TextBlock Grid.Row="2" Grid.Column="0" Text="Hunger: "/>
+                            <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding Hunger}"/>
+                        </Grid>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Label x:Name="Cage2_Label" Content="Cage 2" HorizontalAlignment="Left" Margin="198,10,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="Zookeepers" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="600,44,40,172">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Row="0" Grid.Column="0" Text="Name:"/>
+                            <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding Name}" />
+                            <TextBlock Grid.Row="1" Grid.Column="0" Text="Meat:"/>
+                            <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Meat}"/>
+                            <TextBlock Grid.Row="2" Grid.Column="0" Text="Grass:"/>
+                            <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding Grass}"/>
+                            <TextBlock Grid.Row="3" Grid.Column="0" Text="Fruit:"/>
+                            <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding Fruit}"/>
+                        </Grid>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Label Content="Zookeepers" HorizontalAlignment="Left" Margin="600,13,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="Add_Animal1" Content="Add New Animal" HorizontalAlignment="Left" Margin="10,184,0,0" VerticalAlignment="Top" Click="Add_Animal1_Click"/>
+        <Button x:Name="Hire_Zookeeper" Content="Hire New Zookeeper" HorizontalAlignment="Left" Margin="600,333,0,0" VerticalAlignment="Top" Click="Hire_Zookeeper_Click"/>
+        <Button x:Name="Remove_Animal2" Content="Remove Animal" HorizontalAlignment="Left" Margin="198,217,0,0" VerticalAlignment="Top" Click="Remove_Animal2_Click"/>
+        <Button x:Name="Fire_Zookeeper" Content="Fire Zookeeper" HorizontalAlignment="Left" Margin="601,358,0,0" VerticalAlignment="Top" Click="Fire_Zookeeper_Click"/>
+        <TextBox x:Name="Zookeeper_Input" HorizontalAlignment="Left" Margin="601,305,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="Zookeeper_Name" Content="Please enter Zookeeper name" HorizontalAlignment="Left" Margin="601,267,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="Feed_Animal1" Content="Feed Animals" HorizontalAlignment="Left" Margin="10,247,0,0" VerticalAlignment="Top" Click="Feed_Animal1_Click"/>
+        <ComboBox x:Name="Food" HorizontalAlignment="Left" Margin="417,201,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="Food_Label" Content="Foods:" HorizontalAlignment="Left" Margin="417,175,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="Animals" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="414,41,241,282"/>
+        <Label Content="Animals you can add:" HorizontalAlignment="Left" Margin="414,10,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="Add_Animal2" Content="Add New Animal" HorizontalAlignment="Left" Margin="198,184,0,0" VerticalAlignment="Top" Click="Add_Animal2_Click"/>
+        <Button x:Name="Remove_Animal1" Content="Remove Animal" HorizontalAlignment="Left" Margin="10,217,0,0" VerticalAlignment="Top" Click="Remove_Animal1_Click"/>
+        <Button x:Name="Feed_Animal2" Content="Feed Animals" HorizontalAlignment="Left" Margin="198,247,0,0" VerticalAlignment="Top" Click="Feed_Animal2_Click"/>
+        <Button x:Name="Pickup_Food" Content="Pickup food" HorizontalAlignment="Left" Margin="417,237,0,0" VerticalAlignment="Top" Click="Pickup_Food_Click"/>
+        <Button x:Name="Update" Content="Update Lists" HorizontalAlignment="Left" Margin="10,368,0,0" VerticalAlignment="Top" Click="Update_Click"/>
+    </Grid>
+</Window>
