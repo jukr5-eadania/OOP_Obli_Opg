@@ -71,20 +71,6 @@ namespace Zoo_Simulator
             }
         }
 
-        private void Feed_Animal_Click(object sender, RoutedEventArgs e)
-        {
-            Zookeeper selectedZookeeper = (Zookeeper)Zookeepers.SelectedItem;
-
-            if (selectedZookeeper != null)
-            {
-
-            }
-            else
-            {
-                MessageBox.Show("Please select a zookeeper to feed the animals");
-            }
-        }
-
         private void Add_Animal1_Click(object sender, RoutedEventArgs e)
         {
             string selectedanimal = (string)Animals.SelectedItem;
