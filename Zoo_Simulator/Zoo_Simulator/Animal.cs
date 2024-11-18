@@ -3,34 +3,58 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 
 namespace Zoo_Simulator
 {
     public enum Mood
     {
         Angry,
-        Starving,
         Hungry,
-        Uncomfortable,
         Happy
     }
 
     abstract class Animal
     {
-        protected string name;
-        protected int hunger;
+        public string Name { get; set; }
+        public int Hunger { get; set; }
+        public Mood Mood { get; set; }
 
-        public Animal(string name)
+        public Animal()
         {
-            this.name = name;
-            hunger = 100;
+            Hunger = 10;
+            Mood = Mood.Happy;
+            SetMetabolism();
         }
 
-        public abstract void Eat();
+        public abstract void Eat(Zookeeper zookeeper);
 
-        public virtual void Sleep()
+        public void Metabolism(Object source, ElapsedEventArgs e)
         {
+            if (Hunger > 0)
+            {
+                Hunger--;
+            }
+            if (Hunger > 6)
+            {
+                Mood = Mood.Happy;
+            }
+            if (Hunger <= 6)
+            {
+                Mood = Mood.Hungry;
+            }
+            if (Hunger <= 3)
+            {
+                Mood = Mood.Angry;
+            }
+        }
 
+        public void SetMetabolism()
+        {
+            System.Timers.Timer timer = new System.Timers.Timer(10000);
+            timer.Elapsed += Metabolism;
+            timer.AutoReset = true;
+            timer.Enabled = true;
         }
     }
 }

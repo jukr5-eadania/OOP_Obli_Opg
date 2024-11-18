@@ -55,16 +55,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Add_Animal.xaml.cs">
-      <DependentUpon>Add_Animal.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Parrot.cs" />
-    <Compile Include="Reptile.cs" />
+    <Compile Include="Elephant.cs" />
+    <Compile Include="Lion.cs" />
+    <Compile Include="Zebra.cs" />
     <Compile Include="Zookeeper.cs" />
-    <Page Include="Add_Animal.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -74,14 +68,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Bird.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Mammal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
